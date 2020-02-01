@@ -15,7 +15,8 @@ function objToSql(ob) {
             // e.g. {sleepy: true} => ["sleepy=true"]
             arr.push(key + "=" + value);
         }
-    }
+    };
+    return arr;
 };
 const orm = {
     selectAll: function (cb) {
@@ -33,9 +34,8 @@ const orm = {
         });
     },
     updateOne: function (devoured, condition, cb) {
-        var queryString = "UPDATE burgers SET " + objToSql(devoured) + " WHERE " + condition;
+        var queryString = "UPDATE burgers SET " + objToSql(devoured) + " WHERE " + condition + ";";
         // devoured = devoured === "true" ? true : false;
-        1
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             console.log(queryString)

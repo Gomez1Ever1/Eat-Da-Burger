@@ -1,7 +1,7 @@
 $(function () {
     $(".change-devoured").on("click", function (event) {
         var id = $(this).data("id");
-        var devoured = $(this).data("devoured") === 'true' ? false : true;
+        var devoured = $(this).data("devoured")
 
         var newlyDevoured = {
             devoured: devoured
