@@ -1,0 +1,50 @@
+h1{
+    margin:auto;
+}
+.container{
+    background-color: indianred;
+    margin-top:20px;
+}
+.container1{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content:space-around;
+    align-items: flex-start;
+    padding-bottom:20px;
+}
+.container2{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content:space-around;
+    margin-top:15px;
+    align-items:center;
+}
+.burgerBox{
+    background-color:rgb(102, 207, 102);
+    margin:auto;
+}
+#brgr-img{
+    width:200px;
+    height: 200px;
+    margin:auto;
+    margin-bottom:10px;
+}
+#addBrgr{
+    background-color: rgb(211, 211, 41);
+    margin:auto;
+    margin-top:10px;
+}
+body{
+    background-color:rgb(194, 159, 63);
+}
+#intro{
+    background-color: tomato;
+}
+#instructions{
+    margin-top: 10px;
+    background-color: thistle;
+}

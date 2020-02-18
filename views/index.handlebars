@@ -1,31 +1,59 @@
-<img href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrf67sNb8GGYyWWioZgJwVoqSuyC_3FPBo_B8Kwdis39NYKnPD"
-    alt="burgerImg">
-<h1>Eat The Burger!</h1>
-<h2>Burgers You Have</h2>
-<ul>
-    {{#each burger}}
-    {{#unless devoured}}
-    {{>burger-block devour=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-<h2>Burgers You have Eaten</h2>
+<div class="container rounded">
+    <div class="container1">
+        <div class="container2 rounded col-lg-4 col-sm-12" id="intro">
+            <h1>Eat The Burger!</h1>
+            <img class="rounded-circle" id="brgr-img"
+                src="https://image.freepik.com/free-vector/cartoon-burger-chef-presenting-food_61878-683.jpg"
+                alt="brgr-img">
+        </div>
+        <div class="container2">
+            <div class="col-lg-10 col-sm-12 rounded" id="instructions">
+                <p>Type a Burger name into the "Add a Burger" form to see it on the list of "Burgers You Have"!
+                    <br>Then, "Devour!" it to change its place, or throw it "Back on the Menu!" at your leisure!
+                </p>
+            </div>
+            <div class="container2 rounded col-lg-10" id="addBrgr">
+                <h2>Add a Burger</h2>
+                <form class="create-form">
 
-<ul>
-    {{#each burger}}
-    {{#if devoured}}
-    {{> burger-block devour=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+                    <div class="form-group">
+                        <label for="brgr">Burger:</label>
+                        <input type="text" id="brgr" name="brgr">
+                    </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="brgr">Burger:</label>
-        <input type="text" id="brgr" name="brgr">
+                    <button type="submit">Add Burger</button>
+                </form>
+            </div>>
+        </div>
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <div class="container1 rounded">
+
+        <div class="burgerBox col-sm-10 col-lg-4 offset-lg-1 rounded">
+            <h2>Burgers You Have</h2>
+            <ul class="container1">
+                <div>
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    {{>burger-block devour=true}}
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </ul>
+        </div>
+        <div class="burgerBox col-sm-10 col-lg-4 offset-lg-1 rounded">
+            <h2>Burgers You have Eaten</h2>
+            <ul class="container1">
+                <div>
+                    {{#each burger}}
+                    {{#if devoured}}
+                    {{> burger-block devour=false}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
